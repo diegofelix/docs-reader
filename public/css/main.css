@@ -6,7 +6,7 @@
 
 a {
 	text-decoration: none;
-	color: #8D5E8E;
+	color: #750E02;
 }
 /*
 a:visited {
@@ -14,7 +14,7 @@ a:visited {
 }
 */
 a:hover {
-	color: #BB00BB;
+	color: #FB503B;
 }
 
 body {
@@ -77,8 +77,13 @@ section a {
 	margin: 10px 0 10px 20px;
 	line-height: 25px;
 }
+
 section p {
 	color: #333;
+}
+
+section p a {
+	margin:0;
 }
 
 section blockquote {
@@ -96,15 +101,28 @@ section blockquote {
 	        border-radius: 5px;
 }
 
-section pre {
-	background: #f1f1f1;
-	margin: 10px 0 10px 20px;
-	padding: 5px;
+pre.prettyprint { 
+	display: block; 
+	background-color: #333;
+	border: none;
+	padding: 15px;
+	margin-left: 20px;
+	line-height: 18px;
+	
 }
-section code {
-	background: #f1f1f1;
+pre.prettyprint > * {
+	font-family: Monaco, Consolas, "Lucida Console", monoespace;
+	font-size: 12px;
 }
-
-section pre > code {
-	background: transparent;
-}
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }    /* punctuation */
+pre .pln { color: #fff }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
