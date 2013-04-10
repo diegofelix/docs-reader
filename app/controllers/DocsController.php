@@ -17,10 +17,8 @@ class DocsController extends BaseController {
 	|
 	*/
 
-	public function showWelcome($chapter = null)
+	public function ShowDocs($chapter = null)
 	{
-		$path = '../content/';
-
 		if ($chapter === null)
 		{
 			$chapter = 'installation';
@@ -29,8 +27,8 @@ class DocsController extends BaseController {
 		$test = new MarkdownParser();
 
 		$data = array(
-			'chapter' => $test->transformMarkdown(File::get($path . $chapter . '.md')),
-			'index' => $test->transformMarkdown(File::get($path . 'documentation.md'))
+			'chapter' => $test->transformMarkdown(File::get(Config::get('docs.path') . $chapter . '.md')),
+			'index' => $test->transformMarkdown(File::get(Config::get('docs.path') . 'documentation.md'))
 		);
 
 		return View::make('index', $data);

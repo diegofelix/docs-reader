@@ -1,24 +1,44 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-	<title>Documentação Laravel</title>
+	
+	<meta charset="utf-8">
+
+    {{ Html::style('css/main.css') }}
+
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
+    
 </head>
 <body>
 
 	<div id="wrapper">
 
-		<nav>
+		<header>
 
-			@yield('sidebar')
+			<h1>Documentação</h1>
 
-		</nav>
+		</header>
 
-		<article>
+		<div class="container">
 
-			@yield('content')
+			<nav>
 
-		</article>
+				@yield('sidebar')
 
-	</div>
+			</nav>
+
+			<section>
+
+				@yield('content')
+
+			</section>
+
+		</div>
+
+	</div>	
+
+	<!-- jQuery / Bootstrap -->
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
 
 </body>
 </html>
