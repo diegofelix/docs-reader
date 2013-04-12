@@ -21,6 +21,27 @@ body {
 	text-align: center;
 }
 
+h1,
+h2 {
+	color: #000;
+}
+
+table {
+	margin-left: 20px;
+	width: 95%;
+	border-collapse: collapse;
+	border-bottom: 1px dotted #999;
+	font-size: 12px;
+}
+table th {
+	background: #f1f1f1;	
+}
+table td,
+table th {
+	padding: 0 10px;
+	border: 1px solid #ccc;
+}
+
 #wrapper {
 	font-family: 'Oxygen', sans-serif;
 	width: 940px;
@@ -28,11 +49,6 @@ body {
 	margin: auto;
 	line-height: 30px;
 	color: #666;
-}
-
-h1,
-h2 {
-	color: #000;
 }
 
 header h1 {

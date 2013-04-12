@@ -1,6 +1,6 @@
 <?php
 
-use \dflydev\markdown\MarkdownParser;
+use \dflydev\markdown\MarkdownExtraParser;
 
 class DocsController extends BaseController {
 
@@ -24,7 +24,7 @@ class DocsController extends BaseController {
 			$chapter = 'installation';
 		}
 
-		$test = new MarkdownParser();
+		$test = new MarkdownExtraParser();
 
 		$data = array(
 			'chapter' => $test->transformMarkdown(File::get(Config::get('docs.path') . $chapter . '.md')),
