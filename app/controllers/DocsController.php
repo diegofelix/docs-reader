@@ -24,12 +24,19 @@ class DocsController extends BaseController {
 			$chapter = 'installation';
 		}
 
-		$test = new MarkdownExtraParser();
+		try
+		{
+			$markdown = new MarkdownExtraParser();
 
-		$data = array(
-			'chapter' => $test->transformMarkdown(File::get(Config::get('docs.path') . $chapter . '.md')),
-			'index' => $test->transformMarkdown(File::get(Config::get('docs.path') . 'documentation.md'))
-		);
+			$data = array(
+				'chapter' => $markdown->transformMarkdown(File::get(Config::get('docs.path') . $chapter . '.md')),
+				'index' => $markdown->transformMarkdown(File::get(Config::get('docs.path') . 'documentation.md'))
+			);
+		}
+		catch (Exception $e)
+		{
+			App::abort('404');
+		}
 
 		return View::make('index', $data);
 	}
